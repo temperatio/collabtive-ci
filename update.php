@@ -19,6 +19,7 @@ mysql_query("ALTER TABLE `files` DROP `seenby`");
 
 //0.6.5-CI
 mysql_query("ALTER TABLE `tasks` ADD COLUMN `priority` TINYINT(1)  NOT NULL AFTER `project`;");
+mysql_query("UPDATE settings SET template = 'collabtive-ci';");
 
 // version independent
 // clear templates cache

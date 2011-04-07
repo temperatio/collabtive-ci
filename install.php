@@ -23,7 +23,7 @@ if (empty($locale))
 }
 $template->assign("locale", $locale);
 $template->config_dir = "./language/$locale/";
-$template->template_dir = "./templates/standard/";
+$template->template_dir = "./templates/collabtive-ci/";
 if (!$action)
 {
     //check if required directories are writable
@@ -364,7 +364,7 @@ CREATE TABLE `roles_assigned` (
     //Get the servers default timezone
     $timezone = date_default_timezone_get();
     // insert default settings
-    $ins = mysql_query("INSERT INTO settings (name,subtitle,locale,timezone,dateformat,template,mailnotify,mailfrom,mailmethod) VALUES ('Collabtive','Projectmanagement','$locale','$timezone','d.m.Y','standard',1,'collabtive@localhost','mail')");
+    $ins = mysql_query("INSERT INTO settings (name,subtitle,locale,timezone,dateformat,template,mailnotify,mailfrom,mailmethod) VALUES ('Collabtive','Projectmanagement','$locale','$timezone','d.m.Y','collabtive-ci',1,'collabtive@localhost','mail')");
 
     if (!$ins)
     {
