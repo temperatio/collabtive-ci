@@ -1,9 +1,12 @@
 <?php
 error_reporting(0);
 // Check if directory templates_c exists and is writable
-if (!file_exists("./templates_c") or !is_writable("./templates_c"))
-{
-    die("Required folder templates_c does not exist or is not writable. <br>Please create the folder or make it writable in order to proceed.");
+if (!file_exists("./templates_c") or !is_writable("./templates_c")) {
+    $templates_c_status = mkdir("./templates_c");
+    $files_status = mkdir("./files");
+    if (!$templates_c_status || !$files_status) {
+    	die("Required folder templates_c does not exist or is not writable. <br>Please create the folder or make it writable in order to proceed.");
+    }
 }
 
 require("./init.php");
