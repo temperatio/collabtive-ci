@@ -6,6 +6,7 @@ Collabtive-CI 0.6.5
 + Added current user projects on sidebar.
 + Fixed es translation for wrongselect key.
 + Added CL_BRANCH constant for future implementations.
++ Added auto creation of folder files and templates_c on installation.
 
 Collabtive 0.6.5
 + Fixed bug when assigning tasks while email notification is deactivated / off
