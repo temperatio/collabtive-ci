@@ -246,6 +246,7 @@ if (!$action)
   `status` tinyint(1) NOT NULL default '0',
   `project` int(10) NOT NULL default '0',
   `priority` tinyint(1) NOT NULL,
+  `estimated_time` float NOT NULL default '0',
   PRIMARY KEY  (`ID`),
   KEY `liste` (`liste`),
   KEY `status` (`status`),

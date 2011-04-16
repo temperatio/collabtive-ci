@@ -3,7 +3,7 @@
 Collabtive-CI is web-based project management software based on Collabtive.
 The idea is to maintain the compatibility with the original project adding new features.
 
-* Version: 0.6.5.1
+* Version: 0.6.5.2
 
 
 ## Requirements

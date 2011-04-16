@@ -38,13 +38,14 @@ class task
      */
     /* DAMIAN - START */
     //function add($end, $title, $text, $liste, $project)
-    function add($end, $title, $text, $liste, $project, $priority = 3) {
+    function add($end, $title, $text, $liste, $project, $priority = 3, $estimated_time = 0) {
     /* DAMIAN - END */
         $end = mysql_real_escape_string($end);
         $title = mysql_real_escape_string($title);
         $text = mysql_real_escape_string($text);
         $liste = (int) $liste;
         $project = (int) $project;
+        $estimated_time = round($estimated_time, 2);
 
         $end_fin = strtotime($end);
 
@@ -57,7 +58,7 @@ class task
         // write to db
         /* DAMIAN - START */
         //$ins = mysql_query("INSERT INTO tasks (start,end,title,text,liste,status,project) VALUES ('$start','$end_fin','$title','$text',$liste,1,$project)");
-        $ins = mysql_query("INSERT INTO tasks (start,end,title,text,liste,status,project,priority) VALUES ('$start','$end_fin','$title','$text',$liste,1,$project,$priority)");
+        $ins = mysql_query("INSERT INTO tasks (start,end,title,text,liste,status,project,priority,estimated_time) VALUES ('$start','$end_fin','$title','$text',$liste,1,$project,$priority,'$estimated_time')");
         /* DAMIAN - END */
         if ($ins)
         {
@@ -86,19 +87,20 @@ class task
      */
     /* DAMIAN - START */
     //function edit($id, $end, $title, $text, $liste) {
-    function edit($id, $end, $title, $text, $liste, $priority = 3) {
+    function edit($id, $end, $title, $text, $liste, $priority = 3, $estimated_time = 0) {
     /* DAMIAN - END */
         $end = mysql_real_escape_string($end);
         $title = mysql_real_escape_string($title);
         $text = mysql_real_escape_string($text);
         $id = (int) $id;
         $liste = (int) $liste;
+        $estimated_time = round($estimated_time, 2);
 
         $end = strtotime($end);
 
         /* DAMIAN - START */
         //$upd = mysql_query("UPDATE tasks SET `end`='$end',`title`='$title', `text`='$text', `liste`=$liste WHERE ID = $id");
-        $upd = mysql_query("UPDATE tasks SET `end`='$end',`title`='$title', `text`='$text', `liste`=$liste, `priority`=$priority WHERE ID = $id");
+        $upd = mysql_query("UPDATE tasks SET `end`='$end',`title`='$title', `text`='$text', `liste`=$liste, `priority`=$priority, `estimated_time`='$estimated_time' WHERE ID = $id");
         /* DAMIAN - END */
 		mysql_query("DELETE FROM tasks_assigned WHERE `task` = $id");
 

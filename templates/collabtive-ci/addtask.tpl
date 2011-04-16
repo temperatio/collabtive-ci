@@ -32,6 +32,11 @@
             {/section}
         </select>
     </div>
+    
+    <div class="row">
+        <label for="estimated_time">{#estimated_time#}:</label>
+        <input type="text" class="text" name="estimated_time" realname="{#estimated_time_format#}" regexp="^\s*(\+|-)?((\d+(\.\d+)?)|(\.\d+))\s*$" id="estimated_time" style="width: 80px; margin: 0pt 6px 0pt 0pt;" value="{$task.estimated_time}" />
+    </div>
     <!-- DAMIAN END-->
 
 	<div class="row">

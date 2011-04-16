@@ -1,5 +1,5 @@
 Collabtive-CI 0.6.5.2
-+ 
++ Estimated time for each task.
 
 Collabtive-CI 0.6.5.1
 + Added priorities for tasks.

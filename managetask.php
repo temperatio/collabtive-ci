@@ -21,6 +21,7 @@ $text = getArrayVal($_POST, "text");
 $title = getArrayVal($_POST, "title");
 /* DAMIAN - START */
 $priority = getArrayVal($_POST, "priority");
+$estimated_time = getArrayVal($_POST, "estimated_time");
 /* DAMIAN - END */
 $redir = getArrayVal($_GET, "redir");
 
@@ -81,7 +82,7 @@ if ($action == "addform") {
     // add the task
     /* DAMIAN - START */
     //$tid = $task->add($end, $title, $text, $tasklist, $id);
-    $tid = $task->add($end, $title, $text, $tasklist, $id, $priority);
+    $tid = $task->add($end, $title, $text, $tasklist, $id, $priority, $estimated_time);
     /* DAMIAN - END */
     // if tasks was added and mailnotify is activated, send an email
     if ($tid) {
@@ -164,7 +165,7 @@ if ($action == "addform") {
         die();
     }
     // edit the task
-    if ($task->edit($tid, $end, $title, $text, $tasklist, $priority)) {
+    if ($task->edit($tid, $end, $title, $text, $tasklist, $priority, $estimated_time)) {
         $redir = urldecode($redir);
         if (!empty($assigned)) {
             foreach($assigned as $assignee) {

@@ -10,7 +10,7 @@ define("CL_ROOT", realpath(dirname(__FILE__)));
 define("CL_CONFIG", "standard");
 // collabtive version
 define("CL_VERSION", '0.6.5');
-define("CL_BRANCH_VERSION", '.1');
+define("CL_BRANCH_VERSION", '.2');
 // uncomment for debugging
 //error_reporting(E_ALL | E_STRICT);
 // include config file , pagination and global functions

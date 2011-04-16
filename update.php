@@ -17,9 +17,13 @@ mysql_query("ALTER TABLE `user` CHANGE `zip` `zip` VARCHAR( 10 )"); // overlooke
 mysql_query("ALTER TABLE `files` DROP `seenby`");
 
 
-//0.6.5-CI
+//0.6.5.1-CI
 mysql_query("ALTER TABLE `tasks` ADD COLUMN `priority` TINYINT(1)  NOT NULL AFTER `project`;");
 mysql_query("UPDATE settings SET template = 'collabtive-ci';");
+
+//0.6.5.2-CI
+mysql_query("ALTER TABLE `tasks` ADD COLUMN `estimated_time` float NOT NULL default '0' AFTER `priority`;");
+
 
 // version independent
 // clear templates cache
