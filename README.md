@@ -8,18 +8,8 @@ The idea is to maintain the compatibility with the original project adding new f
 
 ## Requirements
 
-### Server:
-
 * PHP 5.1 or higher (Recent stable build recommended).
 * MySQL 4 or higher.
-
-It is recommended to run Collabtive on LAMP (Linux, Apache, MySQL, PHP) servers.
-Windows Servers may work, but are not supported as well.
-
-### Client:
-
-* Firefox 3, Internet Explorer 7, Opera 9, Safari.
-* Javascript enabled.
 
 ## Installation instructions
 
