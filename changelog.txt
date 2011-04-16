@@ -1,11 +1,14 @@
-Collabtive-CI 0.6.5
+Collabtive-CI 0.6.5.2
++ 
+
+Collabtive-CI 0.6.5.1
 + Added priorities for tasks.
 + Changed email template on Add and Edit task.
 + Removed online users indicator and chat on sidebar.
 + Restored calendar on sidebar.
 + Added current user projects on sidebar.
-+ Fixed es translation for wrongselect key.
-+ Added CL_BRANCH constant for future implementations.
++ Fixed es translation for wrong select key.
++ Added CL_BRANCH_VERSION and used into footer template.
 + Added auto creation of folder files and templates_c on installation.
 
 Collabtive 0.6.5
