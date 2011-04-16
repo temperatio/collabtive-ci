@@ -12,7 +12,7 @@
 	<div id="footer-wrapper">
 		<div class="footer">
 			<div class="footer-in">
-				<a href="https://github.com/barbanet/collabtive-ci">Collabtive-CI 0.6.5</a>
+				<a href="https://github.com/barbanet/collabtive-ci">Collabtive-CI {php}echo CL_VERSION . CL_BRANCH_VERSION;{/php}</a>
 			</div>
 		</div>
 	</div>
